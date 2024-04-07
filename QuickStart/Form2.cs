@@ -14,17 +14,24 @@ namespace QuickStart
 {
     public partial class SubWindow : Form
     {
+        MainWindow mainWindow = Application.OpenForms.OfType<MainWindow>().FirstOrDefault();
+        Data data = new Data();
 
         public SubWindow()
         {
             InitializeComponent();
+            data = DataManagement.ReturnData(mainWindow.jsonPath);
         }
 
         private void ButtonSet_Click(object sender, EventArgs e)
         {
-            MainWindow mainWindow = Application.OpenForms.OfType<MainWindow>().FirstOrDefault();
             mainWindow.SetInput(ComboSelectioin.SelectedIndex, TextBoxInput.Text);
             this.Close();
+        }
+
+        private void ComboSelectioin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TextBoxInput.Text = data.keys[ComboSelectioin.SelectedIndex];
         }
     }
 }

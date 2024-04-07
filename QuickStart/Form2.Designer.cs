@@ -305,6 +305,7 @@
             this.ComboSelectioin.Size = new System.Drawing.Size(121, 21);
             this.ComboSelectioin.TabIndex = 1;
             this.ComboSelectioin.Text = "Select Key";
+            this.ComboSelectioin.SelectedIndexChanged += new System.EventHandler(this.ComboSelectioin_SelectedIndexChanged);
             // 
             // ButtonSet
             // 
