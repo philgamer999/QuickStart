@@ -48,14 +48,14 @@ namespace QuickStart
             data = DataManagement.ReturnData(jsonPath);
 
             // Register Keys
-            // Madifiers: Alt = 1; Ctrl = 2; Shift = 4; Win = 8
+            // Modifiers: Alt = 1; Ctrl = 2; Shift = 4; Win = 8
             // Alt + Ctrl -> 1 + 2 = 3 
             //RegisterHotKey(this.Handle, HOTKEY_ID_X, 3, (int)Keys.A);
             //RegisterHotKey(this.Handle, HOTKEY_ID_ESCAPE, 3, (int)Keys.Escape); 
             for (int i = 0; i < 256; i++)
             {
                 HOTKEYS.Add(i);
-                RegisterHotKey(this.Handle, HOTKEYS[i], 3, i);
+                RegisterHotKey(this.Handle, HOTKEYS[i], 9, i);
             }
         }
         protected override void WndProc(ref Message m)
