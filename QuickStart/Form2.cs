@@ -21,11 +21,20 @@ namespace QuickStart
         {
             InitializeComponent();
             data = DataManagement.ReturnData(mainWindow.jsonPath);
+            ComboPreset.SelectedIndex = 0;
         }
 
         private void ButtonSet_Click(object sender, EventArgs e)
         {
-            mainWindow.SetInput(ComboSelectioin.SelectedIndex, TextBoxInput.Text);
+            if (ComboPreset.SelectedIndex == 0)
+            {
+
+                mainWindow.SetInput(ComboSelectioin.SelectedIndex, "start " + TextBoxInput.Text);
+            }
+            else if (ComboPreset.SelectedIndex == 1)
+            {
+                mainWindow.SetInput(ComboSelectioin.SelectedIndex, TextBoxInput.Text);
+            }
             this.Close();
         }
 

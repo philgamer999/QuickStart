@@ -31,6 +31,7 @@
             this.TextBoxInput = new System.Windows.Forms.TextBox();
             this.ComboSelectioin = new System.Windows.Forms.ComboBox();
             this.ButtonSet = new System.Windows.Forms.Button();
+            this.ComboPreset = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // TextBoxInput
@@ -300,9 +301,9 @@
             "Pa1",
             "OemClear",
             "LButton_OemClear"});
-            this.ComboSelectioin.Location = new System.Drawing.Point(31, 12);
+            this.ComboSelectioin.Location = new System.Drawing.Point(12, 12);
             this.ComboSelectioin.Name = "ComboSelectioin";
-            this.ComboSelectioin.Size = new System.Drawing.Size(121, 21);
+            this.ComboSelectioin.Size = new System.Drawing.Size(75, 21);
             this.ComboSelectioin.TabIndex = 1;
             this.ComboSelectioin.Text = "Select Key";
             this.ComboSelectioin.SelectedIndexChanged += new System.EventHandler(this.ComboSelectioin_SelectedIndexChanged);
@@ -317,11 +318,24 @@
             this.ButtonSet.UseVisualStyleBackColor = true;
             this.ButtonSet.Click += new System.EventHandler(this.ButtonSet_Click);
             // 
+            // ComboPreset
+            // 
+            this.ComboPreset.FormattingEnabled = true;
+            this.ComboPreset.Items.AddRange(new object[] {
+            "Application",
+            "CMD"});
+            this.ComboPreset.Location = new System.Drawing.Point(97, 12);
+            this.ComboPreset.Name = "ComboPreset";
+            this.ComboPreset.Size = new System.Drawing.Size(75, 21);
+            this.ComboPreset.TabIndex = 3;
+            this.ComboPreset.Text = "Preset";
+            // 
             // SubWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(184, 111);
+            this.Controls.Add(this.ComboPreset);
             this.Controls.Add(this.ButtonSet);
             this.Controls.Add(this.ComboSelectioin);
             this.Controls.Add(this.TextBoxInput);
@@ -337,5 +351,6 @@
         private System.Windows.Forms.TextBox TextBoxInput;
         private System.Windows.Forms.ComboBox ComboSelectioin;
         private System.Windows.Forms.Button ButtonSet;
+        private System.Windows.Forms.ComboBox ComboPreset;
     }
 }

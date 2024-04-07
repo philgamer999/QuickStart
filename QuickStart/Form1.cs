@@ -94,7 +94,7 @@ namespace QuickStart
                             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                             startInfo.FileName = "cmd.exe";
-                            startInfo.Arguments = $"/c start {data.keys[i]}";
+                            startInfo.Arguments = $"/c {data.keys[i]}";
                             process.StartInfo = startInfo;
                             process.Start();
                         }
