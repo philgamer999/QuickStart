@@ -339,6 +339,9 @@
             this.Controls.Add(this.ButtonSet);
             this.Controls.Add(this.ComboSelectioin);
             this.Controls.Add(this.TextBoxInput);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximumSize = new System.Drawing.Size(200, 150);
+            this.MinimumSize = new System.Drawing.Size(200, 150);
             this.Name = "SubWindow";
             this.Text = "Input";
             this.ResumeLayout(false);
