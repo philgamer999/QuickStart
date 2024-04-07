@@ -46,9 +46,6 @@ namespace QuickStart
             CreateFiles();
             JSONRead();
 
-            /*NotifyIcon.Visible = true;
-            NotifyIcon.ShowBalloonTip(60000);*/
-
             // Register Keys
             // Madifiers: Alt = 1; Ctrl = 2; Shift = 4; Win = 8
             // Alt + Ctrl -> 1 + 2 = 3 
@@ -99,28 +96,14 @@ namespace QuickStart
                             startInfo.Arguments = $"/c start {data.keys[i]}";
                             process.StartInfo = startInfo;
                             process.Start();
-                            //Console.WriteLine($"{(Keys)Enum.Parse(typeof(Keys), ((Keys)i).ToString())}".Replace(", ", "_").Replace("64", "_64"));
                         }
                         catch (Exception ex)
                         {
-                            //Console.WriteLine (ex.ToString());
+                            Console.WriteLine (ex.ToString());
                         }
                     }
                 }
             }
-
-            /*if (m.Msg == 0x0312 && m.WParam.ToInt32() == HOTKEYS[88]) // GET ALL IDs
-            {
-                Console.Write("public string[] keys = { ");
-                for (int i = 0; i < 256; i++)
-                {
-                    //Console.WriteLine($"{i} : {(Keys)Enum.Parse(typeof(Keys), ((Keys)i).ToString())}");
-                    //Console.WriteLine($"public string {(Keys)Enum.Parse(typeof(Keys), ((Keys)i).ToString())};");
-                    //Console.Write("\"" + $"{ (Keys)Enum.Parse(typeof(Keys), ((Keys)i).ToString())}" + "\", ");
-                    //File.AppendAllText(@"D:\pc\Development\VisualStudio\Workspaces\QuickStart\QuickStart\IDS.txt", $"{i} : {(Keys)Enum.Parse(typeof(Keys), ((Keys)i).ToString())}\n");
-                }
-                Console.Write($";");
-            }*/
             base.WndProc(ref m);
         }
 
