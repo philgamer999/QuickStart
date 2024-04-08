@@ -29,7 +29,7 @@ namespace QuickStart
             if (ComboPreset.SelectedIndex == 0)
             {
 
-                mainWindow.SetInput(ComboSelectioin.SelectedIndex, "start " + TextBoxInput.Text);
+                mainWindow.SetInput(ComboSelectioin.SelectedIndex, "start \"\" \"" + TextBoxInput.Text + "\"");
             }
             else if (ComboPreset.SelectedIndex == 1)
             {
