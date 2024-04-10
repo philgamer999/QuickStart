@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubWindow));
             this.TextBoxInput = new System.Windows.Forms.TextBox();
             this.ComboSelectioin = new System.Windows.Forms.ComboBox();
             this.ButtonSet = new System.Windows.Forms.Button();
@@ -340,6 +341,7 @@
             this.Controls.Add(this.ComboSelectioin);
             this.Controls.Add(this.TextBoxInput);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(200, 150);
             this.MinimumSize = new System.Drawing.Size(200, 150);
             this.Name = "SubWindow";
