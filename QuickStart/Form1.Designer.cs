@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.ButtonQuit = new System.Windows.Forms.Button();
             this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
@@ -62,6 +63,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(184, 111);
             this.Controls.Add(this.ButtonQuit);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
